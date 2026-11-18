@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta http-equiv="Refresh" content="0; url='https://example.com/'" />
-    <script>window.location.replace("https://example.com/");</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Spotify by Bid</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#121212;color:#fff;padding-bottom:90px}
+.top{display:flex;align-items:center;gap:10px;padding:14px 14px 10px;position:sticky;top:0;background:#121212;z-index:10}
+.avatar{width:38px;height:38px;border-radius:50%;object-fit:cover}
+.pills{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.pill{white-space:nowrap;padding:9px 16px;border-radius:25px;background:#2a2a2a;font-size:14px;font-weight:600;border:0;color:#fff}
+.pill.active{background:#1DB954;color:#000}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 14px;margin-top:6px}
+.mini{display:flex;align-items:center;gap:10px;background:#2a2a2a;border-radius:6px;overflow:hidden;min-height:56px}
+.mini img{width:56px;height:56px;object-fit:cover}
+.mini b{font-size:13px;line-height:1.2}
+.section{padding:20px 14px 0}
+.section h2{font-size:21px;line-height:1.2;margin-bottom:14px}
+.row{display:flex;gap:12px;align-items:center;padding:10px 0}
+.row img{width:52px;height:52px;border-radius:4px;object-fit:cover;flex-shrink:0}
+.row .info{flex:1;min-width:0}
+.row .info b{font-size:15px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .info span{font-size:13px;color:#b3b3b3}
+.dots{color:#b3b3b3;font-size:20px}
+.player{position:fixed;bottom:70px;left:10px;right:10px;background:#1DB954;color:#000;border-radius:8px;padding:10px 12px;display:none;align-items:center;gap:10px;z-index:20}
+.player img{width:42px;height:42px;border-radius:4px;object-fit:cover}
+.player .pt{flex:1;min-width:0}
+.player .pt b{font-size:14px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.player .pt span{font-size:12px}
+.player button{background:none;border:0;font-size:20px}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#121212;display:flex;justify-content:space-around;padding:10px 0 14px;border-top:1px solid #222;z-index:30}
+.bottom div{text-align:center;font-size:11px;color:#b3b3b3}
+.bottom div.active{color:#fff}
+.bottom .icon{font-size:22px;display:block;margin-bottom:3px}
+.badge{background:#1DB954;color:#000;font-size:10px;font-weight:900;padding:2px 6px;border-radius:10px;margin-left:6px;vertical-align:middle}
+.fullplayer{position:fixed;inset:0;background:linear-gradient(#5a1f1f,#121212);z-index:100;display:none;flex-direction:column;padding:14px 20px}
+.fullplayer .fp-top{display:flex;justify-content:space-between;align-items:center;text-align:center}
+.fullplayer .fp-top small{font-size:13px;color:#ddd}
+.fullplayer .fp-cover{width:100%;aspect-ratio:1;border-radius:12px;object-fit:cover;margin:18px 0 22px;box-shadow:0 20px 40px rgba(0,0,0,.5)}
+.fullplayer .fp-lyric{font-size:20px;font-weight:800;margin-bottom:22px}
+.fullplayer .fp-title{font-size:26px;font-weight:900}
+.fullplayer .fp-artist{font-size:18px;color:#b3b3b3;margin-bottom:16px}
+.fullplayer .fp-progress{width:100%;accent-color:#fff}
+.fullplayer .fp-time{display:flex;justify-content:space-between;font-size:13px;color:#ccc;margin:6px 0 18px}
+.fullplayer .fp-controls{display:flex;justify-content:space-between;align-items:center}
+.fullplayer .fp-controls button{background:none;border:0;color:#fff;font-size:30px}
+.fullplayer .fp-controls .big{background:#fff;color:#000;width:72px;height:72px;border-radius:50%;font-size:28px}
+.fullplayer .fp-lyricbox{background:#a83232;border-radius:16px 16px 0 0;padding:16px;margin-top:22px}
+</style>
 </head>
-<body style="margin:0;padding:0;background-color:#ffffff;display:flex;justify-content:center;align-items:center;height:100vh;font-family:sans-serif;">
-    Redirecting...
-</body>
-</html>
+<body
